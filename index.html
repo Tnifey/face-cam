@@ -30,16 +30,6 @@
 <body>
     <video controls muted></video>
 
-    <script>
-        const video = document.querySelector('video');
-
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(stream => {
-                video.srcObject = stream;
-            })
-            .catch(err => {
-                console.error(err);
-            });
-    </script>
+    <script src="./face-cam.js"></script>
 </body>
 </html>
