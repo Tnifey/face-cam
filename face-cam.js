@@ -31,11 +31,9 @@ async function run() {
 
     select.addEventListener('change', () => changeStreamDevice(select.value));
 
-    if (devices.length > 1) {
-        document.body.appendChild(select);
-    } else {
-        changeStreamDevice(devices[0].deviceId);
-    }
+    document.body.appendChild(select);
+
+    changeStreamDevice(devices[0].deviceId);
 
     function changeStreamDevice(device) {
         console.log('Changing stream device to:', device);
